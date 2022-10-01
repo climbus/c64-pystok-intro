@@ -1,5 +1,8 @@
 BasicUpstart2(Start)
 
+#import "macros.asm"
+#import "vic.asm"
+
 Start:
     lda $d018
     and #%11110001
