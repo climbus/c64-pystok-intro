@@ -1,7 +1,8 @@
 BasicUpstart2(Start)
 
-
+#import "macros.asm"
 #import "vic.asm"
+#import "screen.asm"
 
 Start:
 
