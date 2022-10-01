@@ -16,13 +16,6 @@ Start:
 !:
     jmp !-
 
-Map:
-	.import binary "./assets/map.bin"
-MapEnd:
-
-Colors:
-	.import binary "./assets/colors.bin"
-
 * = $2000 "Charset"
 Chars:
 	.import binary "./assets/chars.bin"
