@@ -1,13 +1,13 @@
 BasicUpstart2(Start)
 
-#import "macros.asm"
+
 #import "vic.asm"
 
 Start:
-    lda $d018
+    lda VIC.MEMORY_SETUP_REGISTER
     and #%11110001
     ora #%00001000
-    sta $d018
+    sta VIC.MEMORY_SETUP_REGISTER
 
 !:
     jmp !-
