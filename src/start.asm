@@ -7,8 +7,6 @@ BasicUpstart2(Start)
 #import "irq.asm"
 
 Start:
-
-
     // Set character memory to $2000
     lda VIC.MEMORY_SETUP_REGISTER
     and #%11110001
