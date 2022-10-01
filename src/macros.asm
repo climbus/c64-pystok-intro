@@ -1,7 +1,7 @@
 // Some macros inspired by https://github.com/jeff-1amstudios/c64-smooth-scrolling
 
 // Constants
-.label SYSTEM_IRQ_VECTOR = $fffe
+.label SYSTEM_IRQ_VECTOR =  $fffe
 
 
 .macro Set16Value(value, dest) {  // store a 16bit constant to a memory location
