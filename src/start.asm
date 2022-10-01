@@ -11,7 +11,8 @@ Start:
     and #%11110001
     ora #%00001000
     sta VIC.MEMORY_SETUP_REGISTER
-
+    
+    jsr Screen.Draw
 !:
     jmp !-
 
