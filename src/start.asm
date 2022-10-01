@@ -10,7 +10,7 @@ MapEnd:
 Colors:
 	.import binary "./assets/colors.bin"
 
-* = $7000 "Charset"
+* = $d000 "Charset"
 Chars:
 	.import binary "./assets/chars.bin"
 CharsEnd:
