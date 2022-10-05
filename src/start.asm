@@ -16,6 +16,7 @@ Start:
     
     jsr Screen.Draw
     jsr IRQ.Setup
+    jsr Text.Init
 !:
     jmp !-
 

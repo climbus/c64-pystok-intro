@@ -1,6 +1,6 @@
 IRQ: {
 	.label STABLE_LINE = $10
-    .label SCROLL_LINE = $d1
+    .label SCROLL_LINE = $c9
 
     Setup: {
 		sei
@@ -33,19 +33,18 @@ IRQ: {
 
 	StableIRQ: {
 		IRQStart()
-		inc $d020	
-        UpdateYScroll($00)
+        lda VIC.SCROLL_H_REGISTER
+        and #$f8
+        sta VIC.SCROLL_H_REGISTER
+
 		jsr music.play
-		dec $d020
         SetRasterInterrupt(SCROLL_LINE, ScrollIRQ)
 		IRQEnd()
 	}
 
     ScrollIRQ: {
         IRQStart()
-        inc $d021
         jsr Text.Scroll
-        dec $d021
         
         SetRasterInterrupt(STABLE_LINE, StableIRQ)
         IRQEnd()
