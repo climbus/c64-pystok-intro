@@ -1,5 +1,6 @@
 IRQ: {
 	.label STABLE_LINE = $10
+    .label SCROLL_LINE = $d1
 
     Setup: {
 		sei
@@ -33,9 +34,20 @@ IRQ: {
 	StableIRQ: {
 		IRQStart()
 		inc $d020	
+        UpdateYScroll($00)
 		jsr music.play
 		dec $d020
-        SetRasterInterrupt(STABLE_LINE, StableIRQ)
+        SetRasterInterrupt(SCROLL_LINE, ScrollIRQ)
 		IRQEnd()
 	}
+
+    ScrollIRQ: {
+        IRQStart()
+        inc $d021
+        jsr Text.Scroll
+        dec $d021
+        
+        SetRasterInterrupt(STABLE_LINE, StableIRQ)
+        IRQEnd()
+    }
 }

@@ -91,11 +91,11 @@
 }
 
 .macro UpdateYScroll(value) {  // set horizontal softscroll value to xvalue
-    lda $d011
+    lda $d016
     and #$F8
     clc
     adc value
-    sta $d011
+    sta $d016
 }
 
 .macro DebugPrint(value, column) { // put a char in the bottom line of the screen

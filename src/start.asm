@@ -5,6 +5,7 @@ BasicUpstart2(Start)
 #import "vic.asm"
 #import "screen.asm"
 #import "irq.asm"
+#import "scrolled_text.asm"
 
 Start:
     // Set character memory to $2000

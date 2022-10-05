@@ -10,7 +10,8 @@ VIC: {
     .label SCREEN_MSB = $04
 
     .label ENABLE_SPRITE_REGISTER = $d015
-    .label SCROLL_REGISTER = $d011
+    .label SCROLL_V_REGISTER = $d011
+    .label SCROLL_H_REGISTER = $d016
     .label MEMORY_SETUP_REGISTER = $d018
 
     .label temp = $13
